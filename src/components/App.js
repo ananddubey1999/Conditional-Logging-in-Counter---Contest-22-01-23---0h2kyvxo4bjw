@@ -11,6 +11,10 @@ class App extends React.Component{
     this.state = {count:0}
     this.handleClick = this.handleClick.bind(this)
   }
+  
+  shouldComponentUpdate(nextProps,nextState){
+  return nextState.count%2==0
+  }
 
 
   render(){
